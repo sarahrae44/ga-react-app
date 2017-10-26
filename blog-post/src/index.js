@@ -2,15 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Post from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-var post = {
+const post = {
   title: "Dinosaurs are awesome",
-  author: "Stealthy Stegosaurus",
+  authors: ["Stealthy Stegosaurus","Tiny trex", "Iguanadon Ivory"],
   body: "Check out this body property!",
   comments: ["First", "Great post", "Hire this author now!"]
 }
 
 ReactDOM.render(
-  <Post title={post.title} author={post.author} body={post.body} comments={post.comments} />, document.getElementById('root'));
-registerServiceWorker();
+  <Post title={post.title} allAuthors={post.authors} body={post.body} comments={post.comments} />, document.getElementById('root'));
